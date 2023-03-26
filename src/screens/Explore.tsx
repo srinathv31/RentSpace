@@ -1,9 +1,12 @@
-import { View, Text } from "react-native";
+import { View } from "react-native";
+import ExploreHeader from "../components/ExploreHeader";
 
 export default function Explore(): JSX.Element {
     return(
         <View style={{ flex: 1 }}>
-            <Text>Explore</Text>
+            <View style={{ borderBottomWidth: 1, borderBottomColor: "silver", paddingBottom: 20 }}>
+                <ExploreHeader />
+            </View>
         </View>
     );
 }

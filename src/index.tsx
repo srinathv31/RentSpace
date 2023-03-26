@@ -1,6 +1,6 @@
 import React from "react";
 import { SafeAreaView, useWindowDimensions } from "react-native";
-import { SceneMap, TabView } from "react-native-tab-view";
+import { Route, TabView } from "react-native-tab-view";
 import Account from "./screens/Account";
 import Explore from "./screens/Explore";
 import ForRent from "./screens/ForRent";
@@ -17,12 +17,22 @@ export default function Index(): JSX.Element {
         { key: "account", title: "Account" },
     ]);
     
-    const renderScene = SceneMap({
-        explore: () => <Explore />,
-        rentals: () => <Rentals />,
-        forRent: () => <ForRent />,
-        account: () => <Account />,
-    });
+    const renderScene = ({ route }: {
+		route: Route
+	}) => {
+        switch (route.key) {
+        case "explore":
+            return <Explore />;
+        case "rentals":
+            return <Rentals />;
+        case "forRent":
+            return <ForRent />;
+        case "account":
+            return <Account />;
+        default:
+            return null;
+        }
+    };
 
     return(
         <SafeAreaView style={{ flex: 1 }}>
