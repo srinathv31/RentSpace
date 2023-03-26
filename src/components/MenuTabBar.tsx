@@ -7,17 +7,17 @@ export default function MenuTabBar(): JSX.Element {
     const updateIndex = useClientStore(state => state.updateIndex);
     
     return(
-        <View style={{ margin: 20, flexDirection: "row", justifyContent: "space-between", paddingHorizontal: 15 }}>
-            <TouchableOpacity onPress={() => updateIndex(0)} style={{ paddingRight: 5 }}>
+        <View style={{ marginVertical: 20, marginHorizontal: 0, flexDirection: "row", alignItems: "center", justifyContent: "center" }}>
+            <TouchableOpacity onPress={() => updateIndex(0)} style={{ paddingTop: 15, borderTopWidth: 1, borderColor: "black", width: "25%", alignItems: "center" }}>
                 <Ionicons name={index === 0 ? "home" : "home-outline"} size={32}/>
             </TouchableOpacity>
-            <TouchableOpacity onPress={() => updateIndex(1)} style={{ paddingRight: 5 }}>
+            <TouchableOpacity onPress={() => updateIndex(1)} style={{ paddingTop: 15, borderTopWidth: 1, borderColor: "black", width: "25%", alignItems: "center" }}>
                 <Ionicons name={index === 1 ? "calendar" : "calendar-sharp"} size={32}/>
             </TouchableOpacity>
-            <TouchableOpacity onPress={() => updateIndex(2)} style={{ paddingRight: 5 }}>
+            <TouchableOpacity onPress={() => updateIndex(2)} style={{ paddingTop: 15, borderTopWidth: 1, borderColor: "black", width: "25%", alignItems: "center" }}>
                 <Ionicons name={index === 2 ? "bar-chart" : "bar-chart-outline"} size={32}/>
             </TouchableOpacity>
-            <TouchableOpacity onPress={() => updateIndex(3)} style={{ paddingRight: 5 }}>
+            <TouchableOpacity onPress={() => updateIndex(3)} style={{ paddingTop: 15, borderTopWidth: 1, borderColor: "black", width: "25%", alignItems: "center" }}>
                 <Ionicons name={index === 3 ? "person-circle" : "person-circle-outline"} size={32}/>
             </TouchableOpacity>
         </View>
