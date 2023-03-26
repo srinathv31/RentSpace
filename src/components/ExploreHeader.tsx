@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { View, Text, StyleSheet, TouchableOpacity, FlatList } from "react-native";
 import Ionicons from "@expo/vector-icons/Ionicons";
 
@@ -8,7 +8,7 @@ export default function ExploreHeader(): JSX.Element {
     const someData = ["Homes", "Cars", "Spaces", "Apartments", "Condos", "Bikes"];
     
     return(
-        <React.Fragment>
+        <View style={{ borderBottomWidth: 1, borderBottomColor: "silver", paddingBottom: 20 }}>
             <View style={{ flexDirection: "row", justifyContent: "space-between" }}>
                 <View style={{ margin: 20 }}>
                     <Text style={styles.heading}>Explore</Text>
@@ -42,7 +42,7 @@ export default function ExploreHeader(): JSX.Element {
                     );
                 }}
             />
-        </React.Fragment>
+        </View>
     );
 }
 
